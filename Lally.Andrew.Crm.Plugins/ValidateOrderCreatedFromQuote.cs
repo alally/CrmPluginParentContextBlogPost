@@ -60,7 +60,8 @@ namespace Lally.Andrew.Crm.Plugins
              * Once everything is validated we can check the parent context to make sure the salesorder create process was initiated beacuse of a 
              * convertquotetosalesorder message. The parent context can be thought of as the step that caused this step to run. So for example 
              * if you create a plugin on the quote post create and then in that create quote details. If you would create another plugin on the quote 
-             * detail create, the parentContext would be the context of your quote plugin for the quote details your plugin created. 
+             * detail create, the parentContext would be the context of your quote plugin for the quote details your plugin created.
+             * (This may be confusing so see my blog post for a nice diagram) 
              *
              * How this applies to this situation is that when you want to convert a quote you use the convertquotetosalesordermessage when that is being 
              * executed it creates the order entity similar the above scenario so the parent context will contain that message. 
